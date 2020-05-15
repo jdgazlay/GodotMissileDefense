@@ -6,9 +6,8 @@ var spawn_rate := 1
 var active := []
 onready var rocket_spawners = $Spawners.get_children()
 onready var city_targets = $City/targets.get_children()
-onready var Rocket := preload("res://Rocket.tscn")
+onready var Rocket := preload("res://src/scenes/Rocket.tscn")
 onready var stats = $Stats
-onready var win_screen = $CenterContainer
 
 
 func _ready() -> void:
@@ -22,9 +21,6 @@ func spawn_attack_rockets() -> void:
 	"""
 	spawns random rockets with ground targets
 	"""
-	if stats.rockets <= 0:
-		win_screen.visible = true
-		return
 		
 	var spawner := rocket_spawners[randi() % len(rocket_spawners)] as Area2D
 	var target := city_targets[randi() % len(city_targets)] as Area2D

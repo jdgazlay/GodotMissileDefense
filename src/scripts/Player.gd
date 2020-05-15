@@ -4,7 +4,7 @@ onready var screen_size := get_viewport_rect().size
 onready var turret = $turret
 onready var gun_barrel = $turret/turret_body/Gun
 var launch := false
-onready var Rocket = preload("res://Rocket.tscn")
+onready var Rocket = preload("res://src/scenes/Rocket.tscn")
 onready var animation_player := $AnimationPlayer as AnimationPlayer
 
 

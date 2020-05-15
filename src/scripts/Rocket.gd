@@ -4,7 +4,7 @@ var target: Vector2
 export(int) var acceleration := 100
 export(int) var max_speed := 100
 var _velocity: Vector2
-onready var Explosion = preload("res://Explosion.tscn")
+onready var Explosion = preload("res://src/scenes/Explosion.tscn")
 
 func _physics_process(delta: float) -> void:
 	look_at(target)

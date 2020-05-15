@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://World.gd" type="Script" id=1]
-[ext_resource path="res://City.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://src/scenes/City.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/scenes/Stats.tscn" type="PackedScene" id=4]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.5345, 10 )
@@ -14,9 +15,9 @@ extents = Vector2( 32.5345, 10 )
 script = ExtResource( 1 )
 
 [node name="City" parent="." instance=ExtResource( 2 )]
-editor/display_folded = true
 
 [node name="targets" type="Node2D" parent="City"]
+editor/display_folded = true
 
 [node name="Target" type="Area2D" parent="City/targets"]
 editor/display_folded = true
@@ -123,16 +124,3 @@ collision_mask = 0
 shape = SubResource( 2 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-editor/display_folded = true
-visible = false
-margin_right = 1024.0
-margin_bottom = 407.0
-
-[node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 484.0
-margin_top = 196.0
-margin_right = 540.0
-margin_bottom = 210.0
-text = "You Win!"
