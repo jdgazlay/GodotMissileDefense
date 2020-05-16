@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_pressed("click"):
 		launch_rocket()
 		launch = false
 	

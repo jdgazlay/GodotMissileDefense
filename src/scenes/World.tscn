@@ -5,7 +5,6 @@
 [ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/scenes/Stats.tscn" type="PackedScene" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.5345, 10 )
 
@@ -124,3 +123,9 @@ collision_mask = 0
 shape = SubResource( 2 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_bottom = 0.0
+margin_left = 1021.77
+margin_top = 10.808
+margin_right = 1021.77
+margin_bottom = 10.808
