@@ -6,5 +6,5 @@ func _ready() -> void:
 	set_collision_mask_bit(1, 1)
 
 
-func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
+func _on_AnimationPlayer_animation_finished(_anim_name: String) -> void:
 	queue_free()

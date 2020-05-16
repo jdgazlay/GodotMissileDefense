@@ -10,6 +10,7 @@ onready var stats = $Stats
 func _ready() -> void:
 	randomize()
 	spawn_timer = Timer.new();
+	# warning-ignore:return_value_discarded
 	spawn_timer.connect("timeout", self, "spawn_attack_rockets")
 	add_child(spawn_timer)
 	spawn_timer.start(2)
@@ -38,4 +39,4 @@ func spawn_attack_rockets() -> void:
 		add_child(rocket)
 
 	stats.set_rockets(stats.rockets + spawn_rate)
-	spawn_timer.start(stats.level_map[stats.level].spawn_timer_sec)
+	spawn_timer.start(spawn_timer_sec)

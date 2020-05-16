@@ -5,6 +5,7 @@ export(int) var level := 1 setget set_level
 
 var rocket_levels = [10, 20, 35, 50]
 
+# warning-ignore:unused_class_variable
 var level_map = {
 	1: {
 		'spawn_timer_sec': 4,
