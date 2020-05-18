@@ -24,8 +24,7 @@ func building_damaged(building_name: String) -> void:
 
 
 func _on_Building1_area_entered(area: Area2D) -> void:
-	if not building_names[0] in buildings_damaged:
-		building_damaged(building_names[0])
+	building_damaged(building_names[0])
 
 
 func _on_Building2_area_entered(area: Area2D) -> void:
