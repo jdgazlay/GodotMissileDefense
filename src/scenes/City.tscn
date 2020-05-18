@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/scenes/City.gd" type="Script" id=1]
+[ext_resource path="res://src/scripts/City.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Building1 damaged"
 length = 1.5
 tracks/0/type = "value"
@@ -103,7 +103,7 @@ tracks/7/keys = {
 "values": [ 0.0, 30.0, 58.0 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Building2 damaged"
 length = 1.5
 tracks/0/type = "value"
@@ -227,7 +227,7 @@ tracks/9/keys = {
 "values": [ 0.0, -18.0, -18.0, -18.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Building3 damaged"
 length = 1.5
 tracks/0/type = "value"
@@ -375,7 +375,7 @@ tracks/11/keys = {
 "values": [ 0.0, 28.0, 28.0, -14.0, -14.0, -58.0 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "Building4 damaged"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Building4/icon8:rotation_degrees")
@@ -426,7 +426,7 @@ tracks/3/keys = {
 "values": [ 0.0, 148.0, 120.0 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "Building5 damaged"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Building5/Node2D:position")
@@ -453,7 +453,7 @@ tracks/1/keys = {
 "values": [ 0.0, 8.0, 22.0, 42.0, 76.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 38.3558, 12.3853 )
 
 [node name="City" type="Node2D"]
@@ -539,7 +539,6 @@ editor/display_folded = true
 [node name="Node2D" type="Node2D" parent="Building3"]
 editor/display_folded = true
 position = Vector2( 722.642, 500.408 )
-scale = Vector2( 1, 1 )
 
 [node name="icon6" type="Sprite" parent="Building3/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
@@ -612,11 +611,11 @@ texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/Building1 damaged" = SubResource( 2 )
-"anims/Building2 damaged" = SubResource( 3 )
-"anims/Building3 damaged" = SubResource( 4 )
-"anims/Building4 damaged" = SubResource( 5 )
-"anims/Building5 damaged" = SubResource( 6 )
+"anims/Building1 damaged" = SubResource( 1 )
+"anims/Building2 damaged" = SubResource( 2 )
+"anims/Building3 damaged" = SubResource( 3 )
+"anims/Building4 damaged" = SubResource( 4 )
+"anims/Building5 damaged" = SubResource( 5 )
 
 [node name="Targets" type="Node2D" parent="."]
 
@@ -626,7 +625,7 @@ position = Vector2( 88.2294, 422.144 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building1"]
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Building2" type="Area2D" parent="Targets"]
 editor/display_folded = true
@@ -634,7 +633,7 @@ position = Vector2( 256.07, 444.424 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building2"]
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Building3" type="Area2D" parent="Targets"]
 editor/display_folded = true
@@ -643,7 +642,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building3"]
 position = Vector2( -1.5957, 5.98376 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Building4" type="Area2D" parent="Targets"]
 editor/display_folded = true
@@ -652,7 +651,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building4"]
 position = Vector2( -1.5957, 5.98376 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Building5" type="Area2D" parent="Targets"]
 editor/display_folded = true
@@ -661,7 +660,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building5"]
 position = Vector2( -1.5957, 5.98376 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 [connection signal="area_entered" from="Targets/Building1" to="." method="_on_Building1_area_entered"]
 [connection signal="area_entered" from="Targets/Building2" to="." method="_on_Building2_area_entered"]
 [connection signal="area_entered" from="Targets/Building3" to="." method="_on_Building3_area_entered"]

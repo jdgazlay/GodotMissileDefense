@@ -5,7 +5,7 @@
 [ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/scenes/Stats.tscn" type="PackedScene" id=4]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -25,7 +25,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Spawner2" type="Area2D" parent="Spawners"]
 editor/display_folded = true
@@ -34,7 +34,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner2"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Spawner3" type="Area2D" parent="Spawners"]
 editor/display_folded = true
@@ -43,7 +43,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner3"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Spawner4" type="Area2D" parent="Spawners"]
 editor/display_folded = true
@@ -52,7 +52,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner4"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Spawner5" type="Area2D" parent="Spawners"]
 editor/display_folded = true
@@ -61,7 +61,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner5"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Spawner6" type="Area2D" parent="Spawners"]
 editor/display_folded = true
@@ -70,7 +70,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner6"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Spawner7" type="Area2D" parent="Spawners"]
 editor/display_folded = true
@@ -79,7 +79,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spawners/Spawner7"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
 anchor_left = 1.0
