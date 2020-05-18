@@ -1,12 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/City.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/scenes/Stats.tscn" type="PackedScene" id=4]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.5345, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -14,44 +11,6 @@ extents = Vector2( 32.5345, 10 )
 script = ExtResource( 1 )
 
 [node name="City" parent="." instance=ExtResource( 2 )]
-
-[node name="targets" type="Node2D" parent="City"]
-editor/display_folded = true
-
-[node name="Target" type="Area2D" parent="City/targets"]
-editor/display_folded = true
-position = Vector2( 86.8103, 422.539 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="City/targets/Target"]
-shape = SubResource( 1 )
-
-[node name="Target2" type="Area2D" parent="City/targets"]
-editor/display_folded = true
-position = Vector2( 256.321, 448.933 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="City/targets/Target2"]
-shape = SubResource( 1 )
-
-[node name="Target3" type="Area2D" parent="City/targets"]
-editor/display_folded = true
-position = Vector2( 733.474, 459.491 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="City/targets/Target3"]
-shape = SubResource( 1 )
-
-[node name="Target4" type="Area2D" parent="City/targets"]
-editor/display_folded = true
-position = Vector2( 892.427, 502.015 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="City/targets/Target4"]
-shape = SubResource( 1 )
-
-[node name="Target5" type="Area2D" parent="City/targets"]
-editor/display_folded = true
-position = Vector2( 999.471, 402.596 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="City/targets/Target5"]
-shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 483.225, 540.043 )
@@ -129,3 +88,4 @@ margin_left = 1021.77
 margin_top = 10.808
 margin_right = 1021.77
 margin_bottom = 10.808
+[connection signal="building_damaged" from="City" to="Stats" method="_on_City_building_damaged"]

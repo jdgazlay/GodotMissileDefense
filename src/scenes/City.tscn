@@ -1,43 +1,499 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/icon.png" type="Texture" id=1]
+[ext_resource path="res://src/scenes/City.gd" type="Script" id=1]
+[ext_resource path="res://assets/icon.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Building1 damaged"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Building1/icon20:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 76.7393, 417.763 ), Vector2( 28.3227, 352.239 ), Vector2( -35.3599, 311.831 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Building1/icon20:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -294.0, -294.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Building1/icon19:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.2, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 74.5478, 423.643 ), Vector2( 129.502, 361.9 ), Vector2( 233.916, 301.773 ), Vector2( 316.994, 310.178 ), Vector2( 375.505, 350.909 ), Vector2( 425.61, 448.534 ), Vector2( 432.722, 530.966 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Building1/icon19:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 116.0, 116.0, 208.0, 252.0, 264.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Building1/icon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75.518, 456.326 ), Vector2( 55.1525, 447.275 ), Vector2( -10.1465, 505.139 ), Vector2( -18.5513, 520.655 ), Vector2( -23.077, 520.332 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Building1/icon3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -24.0, -50.0, -90.0, -90.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Building1/icon2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75.518, 508.342 ), Vector2( 96.8533, 512.221 ), Vector2( 111.077, 536.466 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Building1/icon2:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 30.0, 58.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Building2 damaged"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Building2/icon16:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 163.524, 503.415 ), Vector2( 129.217, 536.924 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Building2/icon16:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -34.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Building2/icon4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 181.315, 517.159 ), Vector2( 162.566, 527.93 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Building2/icon4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -34.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Building2/icon5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 243.911, 500.408 ), Vector2( 243.911, 534.316 ), Vector2( 243.911, 534.316 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Building2/icon5:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 22.0, 52.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Building2/icon18:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 252.514, 443.843 ), Vector2( 280.438, 471.767 ), Vector2( 299.188, 489.719 ), Vector2( 319.133, 515.648 ), Vector2( 331.101, 522.829 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Building2/icon18:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -18.0, -18.0, -18.0, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Building2/icon17:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 246.648, 447.52 ), Vector2( 277.365, 480.63 ), Vector2( 296.114, 498.582 ), Vector2( 316.06, 524.511 ), Vector2( 322.443, 529.298 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Building2/icon17:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -18.0, -18.0, -18.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Building3 damaged"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Building3/Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 722.642, 500.408 ), Vector2( 669.713, 465.695 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Building3/Node2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -30.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Building3/Node2D/icon7:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 61.714, 22.922 ), Vector2( 67.6931, 10.0915 ), Vector2( 68.7588, 3.72562 ), Vector2( 40.3781, 9.56125 ), Vector2( -8.79108, 51.8491 ), Vector2( -26.7634, 67.9811 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Building3/Node2D/icon7:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -16.0, -34.0, -34.0, -34.0, -40.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Building3/Node2D/icon6:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -30.5351, -6.34467 ), Vector2( -39.6262, 3.99109 ), Vector2( -87.8622, 8.04584 ), Vector2( -94.8578, 18.7005 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Building3/Node2D/icon6:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -18.0, -36.0, -54.0, -50.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Building3/Node2D/icon11:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -18.319, -28.018 ), Vector2( -18.319, -28.0179 ), Vector2( -59.7444, -31.5498 ), Vector2( -74.8598, -12.3467 ), Vector2( -123.193, 7.68787 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Building3/Node2D/icon11:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -18.0, -36.0, -54.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Building3/Node2D/icon12:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -18.319, -1.569 ), Vector2( -18.319, -1.56897 ), Vector2( -53.2227, -10.3828 ), Vector2( -61.6861, 7.89868 ), Vector2( -105.463, 21.8535 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Building3/Node2D/icon12:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -18.0, -36.0, -54.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Building3/Node2D/icon13:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 33.106, -31.544 ), Vector2( 49.5964, -29.4227 ), Vector2( 18.4055, -49.1385 ), Vector2( -16.8866, -55.3524 ), Vector2( -119.121, -62.6074 ), Vector2( -167.526, -20.2847 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Building3/Node2D/icon13:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 28.0, 28.0, -14.0, -14.0, -58.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Building4 damaged"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Building4/icon8:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 20.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Building4/icon8:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 881.337, 523.33 ), Vector2( 880.102, 546.376 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Building4/icon15:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 895.632, 502.281 ), Vector2( 958.186, 512.981 ), Vector2( 940.901, 534.381 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Building4/icon15:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 148.0, 120.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Building5 damaged"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Building5/Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 988.015, 474.399 ), Vector2( 999.531, 470.856 ), Vector2( 1021.68, 480.6 ), Vector2( 1046.48, 498.317 ), Vector2( 1050.02, 517.806 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Building5/Node2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 8.0, 22.0, 42.0, 76.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.3558, 12.3853 )
 
 [node name="City" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="Ground" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 289.663, 570.057 )
 scale = Vector2( 19.2389, 1 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building1" type="Node2D" parent="."]
 editor/display_folded = true
+position = Vector2( 0.645561, -0.322784 )
 
 [node name="icon2" type="Sprite" parent="Building1"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 75.518, 508.342 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon3" type="Sprite" parent="Building1"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 75.518, 456.326 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon19" type="Sprite" parent="Building1"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 74.5478, 427.678 )
-scale = Vector2( 0.518067, 0.27757 )
-texture = ExtResource( 1 )
+position = Vector2( 74.5478, 423.643 )
+scale = Vector2( 0.518067, 0.151485 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon20" type="Sprite" parent="Building1"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 76.7393, 423.25 )
-scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+position = Vector2( 76.7393, 417.763 )
+scale = Vector2( 0.311219, 0.106095 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building2" type="Node2D" parent="."]
@@ -46,73 +502,77 @@ editor/display_folded = true
 [node name="icon4" type="Sprite" parent="Building2"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 181.315, 517.159 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon5" type="Sprite" parent="Building2"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 243.911, 500.408 )
 scale = Vector2( 1, 1.52347 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon16" type="Sprite" parent="Building2"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 163.524, 503.415 )
 scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon18" type="Sprite" parent="Building2"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 252.514, 443.843 )
 scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon17" type="Sprite" parent="Building2"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 246.648, 447.52 )
 scale = Vector2( 0.598508, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building3" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="icon6" type="Sprite" parent="Building3"]
-modulate = Color( 0, 0, 0, 1 )
+[node name="Node2D" type="Node2D" parent="Building3"]
+editor/display_folded = true
 position = Vector2( 722.642, 500.408 )
+scale = Vector2( 1, 1 )
+
+[node name="icon6" type="Sprite" parent="Building3/Node2D"]
+modulate = Color( 0, 0, 0, 1 )
 scale = Vector2( 1, 1.52347 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
-[node name="icon7" type="Sprite" parent="Building3"]
+[node name="icon7" type="Sprite" parent="Building3/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 784.356, 523.33 )
+position = Vector2( 61.714, 22.922 )
 scale = Vector2( 1, 0.807142 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
-[node name="icon11" type="Sprite" parent="Building3"]
+[node name="icon11" type="Sprite" parent="Building3/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 704.323, 472.39 )
+position = Vector2( -18.319, -28.018 )
 scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
-[node name="icon12" type="Sprite" parent="Building3"]
+[node name="icon12" type="Sprite" parent="Building3/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 704.323, 498.839 )
+position = Vector2( -18.319, -1.569 )
 scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
-[node name="icon13" type="Sprite" parent="Building3"]
+[node name="icon13" type="Sprite" parent="Building3/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 755.748, 468.864 )
+position = Vector2( 33.106, -31.544 )
 scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building4" type="Node2D" parent="."]
@@ -122,29 +582,88 @@ editor/display_folded = true
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 881.337, 523.33 )
 scale = Vector2( 1, 0.807142 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="icon15" type="Sprite" parent="Building4"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 895.632, 502.281 )
 scale = Vector2( 0.501634, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building5" type="Node2D" parent="."]
-editor/display_folded = true
 
-[node name="icon10" type="Sprite" parent="Building5"]
+[node name="Node2D" type="Node2D" parent="Building5"]
+position = Vector2( 991.307, 474.399 )
+rotation = 0.0349066
+
+[node name="icon10" type="Sprite" parent="Building5/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 987.975, 400.451 )
+position = Vector2( -0.0400391, -73.948 )
 scale = Vector2( 0.311219, 0.27757 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
-[node name="icon9" type="Sprite" parent="Building5"]
+[node name="icon9" type="Sprite" parent="Building5/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 988.015, 474.399 )
 scale = Vector2( 1, 2.33624 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Building1 damaged" = SubResource( 2 )
+"anims/Building2 damaged" = SubResource( 3 )
+"anims/Building3 damaged" = SubResource( 4 )
+"anims/Building4 damaged" = SubResource( 5 )
+"anims/Building5 damaged" = SubResource( 6 )
+
+[node name="Targets" type="Node2D" parent="."]
+
+[node name="Building1" type="Area2D" parent="Targets"]
+editor/display_folded = true
+position = Vector2( 88.2294, 422.144 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building1"]
+shape = SubResource( 1 )
+
+[node name="Building2" type="Area2D" parent="Targets"]
+editor/display_folded = true
+position = Vector2( 256.07, 444.424 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building2"]
+shape = SubResource( 1 )
+
+[node name="Building3" type="Area2D" parent="Targets"]
+editor/display_folded = true
+position = Vector2( 734.374, 461.976 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building3"]
+position = Vector2( -1.5957, 5.98376 )
+shape = SubResource( 1 )
+
+[node name="Building4" type="Area2D" parent="Targets"]
+editor/display_folded = true
+position = Vector2( 895.698, 497.369 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building4"]
+position = Vector2( -1.5957, 5.98376 )
+shape = SubResource( 1 )
+
+[node name="Building5" type="Area2D" parent="Targets"]
+editor/display_folded = true
+position = Vector2( 1002.89, 394.198 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building5"]
+position = Vector2( -1.5957, 5.98376 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="Targets/Building1" to="." method="_on_Building1_area_entered"]
+[connection signal="area_entered" from="Targets/Building2" to="." method="_on_Building2_area_entered"]
+[connection signal="area_entered" from="Targets/Building3" to="." method="_on_Building3_area_entered"]
+[connection signal="area_entered" from="Targets/Building4" to="." method="_on_Building4_area_entered"]
+[connection signal="area_entered" from="Targets/Building5" to="." method="_on_Building5_area_entered"]

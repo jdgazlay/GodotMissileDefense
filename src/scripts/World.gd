@@ -2,7 +2,7 @@ extends Node2D
 
 var spawn_timer: Timer
 onready var rocket_spawners = $Spawners.get_children()
-onready var city_targets = $City/targets.get_children()
+onready var city_targets = $City/Targets.get_children()
 onready var Rocket := preload("res://src/scenes/Rocket.tscn")
 onready var stats = $Stats
 
@@ -22,13 +22,21 @@ func spawn_attack_rockets() -> void:
 	"""
 	var spawn_timer_sec = stats.level_map[stats.level].spawn_timer_sec
 	var spawn_rate = stats.level_map[stats.level].spawn_rate
-
-
+	var undamaged_targets = city_targets
 	
+	for city_target in undamaged_targets:
+		if city_target.name in stats.buildings_damaged:
+			undamaged_targets.remove(undamaged_targets.find(city_target))
+			
+	
+	if not len(undamaged_targets):
+		spawn_timer.queue_free()
+		print('you lose')
+		return
 	
 	for i in spawn_rate:
 		var spawner := rocket_spawners[randi() % len(rocket_spawners)] as Area2D
-		var target := city_targets[randi() % len(city_targets)] as Area2D
+		var target := undamaged_targets[randi() % len(undamaged_targets)] as Area2D
 		var rocket = Rocket.instance()
 		rocket.target = target.global_position
 		rocket.position = spawner.global_position

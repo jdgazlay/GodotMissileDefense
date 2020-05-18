@@ -25,6 +25,8 @@ var level_map = {
 	}
 }
 
+var buildings_damaged : = []
+
 onready var level_label := $VBoxContainer/CenterContainer/LevelLabel as Label
 onready var rocket_label := $VBoxContainer/CenterContainer2/RocketLabel as Label
 
@@ -42,3 +44,6 @@ func set_rockets(value) -> void:
 func set_level(value) -> void:
 	level = value
 	level_label.text = str(level)
+
+func _on_City_building_damaged(building: String) -> void:
+	buildings_damaged.append(building)
