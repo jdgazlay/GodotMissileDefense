@@ -3,10 +3,9 @@
 [ext_resource path="res://src/scripts/Rocket.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 3.21269
-height = 17.0744
+radius = 5.70685
+height = 22.4419
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 6.09613
@@ -74,7 +73,6 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
-editor/display_folded = true
 collision_layer = 0
 collision_mask = 0
 

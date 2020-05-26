@@ -16,10 +16,8 @@ script = ExtResource( 1 )
 position = Vector2( 483.225, 540.043 )
 
 [node name="Spawners" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Spawner" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 47.2202, -13.7161 )
 collision_layer = 0
 collision_mask = 0
@@ -28,7 +26,6 @@ collision_mask = 0
 shape = SubResource( 1 )
 
 [node name="Spawner2" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 212.109, -13.7161 )
 collision_layer = 0
 collision_mask = 0
@@ -37,7 +34,6 @@ collision_mask = 0
 shape = SubResource( 1 )
 
 [node name="Spawner3" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 382.839, -13.7161 )
 collision_layer = 0
 collision_mask = 0
@@ -46,7 +42,6 @@ collision_mask = 0
 shape = SubResource( 1 )
 
 [node name="Spawner4" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 522.489, -13.7161 )
 collision_layer = 0
 collision_mask = 0
@@ -55,7 +50,6 @@ collision_mask = 0
 shape = SubResource( 1 )
 
 [node name="Spawner5" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 693.922, -13.7161 )
 collision_layer = 0
 collision_mask = 0
@@ -64,7 +58,6 @@ collision_mask = 0
 shape = SubResource( 1 )
 
 [node name="Spawner6" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 850.908, -13.7161 )
 collision_layer = 0
 collision_mask = 0
@@ -73,7 +66,6 @@ collision_mask = 0
 shape = SubResource( 1 )
 
 [node name="Spawner7" type="Area2D" parent="Spawners"]
-editor/display_folded = true
 position = Vector2( 980.927, -13.7161 )
 collision_layer = 0
 collision_mask = 0

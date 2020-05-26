@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/scripts/City.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
@@ -453,8 +453,26 @@ tracks/1/keys = {
 "values": [ 0.0, 8.0, 22.0, 42.0, 76.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 38.3558, 12.3853 )
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 36.3315, 67.4449 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 35.0054, 53.1234 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 35.0054, 30.5298 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 36.9922, 50.3168 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 36.9922, 14.0275 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 38.3558, 31.5034 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 38.3558, 23.1932 )
 
 [node name="City" type="Node2D"]
 script = ExtResource( 1 )
@@ -467,7 +485,6 @@ texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building1" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0.645561, -0.322784 )
 
 [node name="icon2" type="Sprite" parent="Building1"]
@@ -497,7 +514,6 @@ texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building2" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="icon4" type="Sprite" parent="Building2"]
 modulate = Color( 0, 0, 0, 1 )
@@ -534,10 +550,8 @@ texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building3" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Node2D" type="Node2D" parent="Building3"]
-editor/display_folded = true
 position = Vector2( 722.642, 500.408 )
 
 [node name="icon6" type="Sprite" parent="Building3/Node2D"]
@@ -575,7 +589,6 @@ texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="Building4" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="icon8" type="Sprite" parent="Building4"]
 modulate = Color( 0, 0, 0, 1 )
@@ -594,8 +607,7 @@ offset = Vector2( 11.4613, 0 )
 [node name="Building5" type="Node2D" parent="."]
 
 [node name="Node2D" type="Node2D" parent="Building5"]
-position = Vector2( 991.307, 474.399 )
-rotation = 0.0349066
+position = Vector2( 988.015, 474.399 )
 
 [node name="icon10" type="Sprite" parent="Building5/Node2D"]
 modulate = Color( 0, 0, 0, 1 )
@@ -620,47 +632,49 @@ offset = Vector2( 11.4613, 0 )
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="Building1" type="Area2D" parent="Targets"]
-editor/display_folded = true
-position = Vector2( 88.2294, 422.144 )
+position = Vector2( 87.3257, 478.854 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building1"]
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="Building2" type="Area2D" parent="Targets"]
-editor/display_folded = true
-position = Vector2( 256.07, 444.424 )
+position = Vector2( 221.118, 487.207 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building2"]
-shape = SubResource( 6 )
+position = Vector2( 33.607, -1.10446 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Targets/Building2"]
+position = Vector2( -31.3981, 23.3513 )
+shape = SubResource( 12 )
 
 [node name="Building3" type="Area2D" parent="Targets"]
-editor/display_folded = true
-position = Vector2( 734.374, 461.976 )
+position = Vector2( 766.184, 493.935 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building3"]
-position = Vector2( -1.5957, 5.98376 )
-shape = SubResource( 6 )
+position = Vector2( -32.8181, 2.20889 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Targets/Building3"]
+position = Vector2( 28.2426, 10.4134 )
+shape = SubResource( 13 )
 
 [node name="Building4" type="Area2D" parent="Targets"]
-editor/display_folded = true
-position = Vector2( 895.698, 497.369 )
+position = Vector2( 893.331, 517.249 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building4"]
-position = Vector2( -1.5957, 5.98376 )
-shape = SubResource( 6 )
+shape = SubResource( 11 )
 
 [node name="Building5" type="Area2D" parent="Targets"]
-editor/display_folded = true
-position = Vector2( 1002.89, 394.198 )
+position = Vector2( 996.83, 407.96 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building5"]
-position = Vector2( -1.5957, 5.98376 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 [connection signal="area_entered" from="Targets/Building1" to="." method="_on_Building1_area_entered"]
 [connection signal="area_entered" from="Targets/Building2" to="." method="_on_Building2_area_entered"]
 [connection signal="area_entered" from="Targets/Building3" to="." method="_on_Building3_area_entered"]
