@@ -2,7 +2,7 @@ extends Node2D
 
 signal building_damaged(building)
 
-onready var animation_player := $AnimationPlayer as AnimationPlayer
+onready var animation_tree := $AnimationTree as AnimationTree
 
 var building_names = [
 	'Building1',
@@ -17,7 +17,7 @@ var buildings_damaged : = []
 
 func building_damaged(building_name: String) -> void:
 	if not building_name in buildings_damaged:
-		animation_player.play(building_name + ' damaged')
+		animation_tree.set('parameters/' + building_name + ' damaged/active', true)
 		buildings_damaged.append(building_name)
 		emit_signal("building_damaged", building_name)
 	

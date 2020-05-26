@@ -1,457 +1,12 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/scripts/City.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
-
-[sub_resource type="Animation" id=1]
-resource_name = "Building1 damaged"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Building1/icon20:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 76.7393, 417.763 ), Vector2( 28.3227, 352.239 ), Vector2( -35.3599, 311.831 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Building1/icon20:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -294.0, -294.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Building1/icon19:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.2, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 74.5478, 423.643 ), Vector2( 129.502, 361.9 ), Vector2( 233.916, 301.773 ), Vector2( 316.994, 310.178 ), Vector2( 375.505, 350.909 ), Vector2( 425.61, 448.534 ), Vector2( 432.722, 530.966 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Building1/icon19:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 116.0, 116.0, 208.0, 252.0, 264.0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Building1/icon3:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 75.518, 456.326 ), Vector2( 55.1525, 447.275 ), Vector2( -10.1465, 505.139 ), Vector2( -18.5513, 520.655 ), Vector2( -23.077, 520.332 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Building1/icon3:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7, 1, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -24.0, -50.0, -90.0, -90.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Building1/icon2:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 75.518, 508.342 ), Vector2( 96.8533, 512.221 ), Vector2( 111.077, 536.466 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Building1/icon2:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.4, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 30.0, 58.0 ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "Building2 damaged"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Building2/icon16:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 163.524, 503.415 ), Vector2( 129.217, 536.924 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Building2/icon16:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, -34.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Building2/icon4:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 181.315, 517.159 ), Vector2( 162.566, 527.93 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Building2/icon4:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, -34.0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Building2/icon5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 243.911, 500.408 ), Vector2( 243.911, 534.316 ), Vector2( 243.911, 534.316 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Building2/icon5:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 22.0, 52.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Building2/icon18:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 252.514, 443.843 ), Vector2( 280.438, 471.767 ), Vector2( 299.188, 489.719 ), Vector2( 319.133, 515.648 ), Vector2( 331.101, 522.829 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Building2/icon18:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -18.0, -18.0, -18.0, 0.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Building2/icon17:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 246.648, 447.52 ), Vector2( 277.365, 480.63 ), Vector2( 296.114, 498.582 ), Vector2( 316.06, 524.511 ), Vector2( 322.443, 529.298 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Building2/icon17:rotation_degrees")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 0.4, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -18.0, -18.0, -18.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "Building3 damaged"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Building3/Node2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 722.642, 500.408 ), Vector2( 669.713, 465.695 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Building3/Node2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, -30.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Building3/Node2D/icon7:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 61.714, 22.922 ), Vector2( 67.6931, 10.0915 ), Vector2( 68.7588, 3.72562 ), Vector2( 40.3781, 9.56125 ), Vector2( -8.79108, 51.8491 ), Vector2( -26.7634, 67.9811 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Building3/Node2D/icon7:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -16.0, -34.0, -34.0, -34.0, -40.0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Building3/Node2D/icon6:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -30.5351, -6.34467 ), Vector2( -39.6262, 3.99109 ), Vector2( -87.8622, 8.04584 ), Vector2( -94.8578, 18.7005 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Building3/Node2D/icon6:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, -18.0, -36.0, -54.0, -50.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Building3/Node2D/icon11:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -18.319, -28.018 ), Vector2( -18.319, -28.0179 ), Vector2( -59.7444, -31.5498 ), Vector2( -74.8598, -12.3467 ), Vector2( -123.193, 7.68787 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Building3/Node2D/icon11:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, -18.0, -36.0, -54.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Building3/Node2D/icon12:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -18.319, -1.569 ), Vector2( -18.319, -1.56897 ), Vector2( -53.2227, -10.3828 ), Vector2( -61.6861, 7.89868 ), Vector2( -105.463, 21.8535 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Building3/Node2D/icon12:rotation_degrees")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, -18.0, -36.0, -54.0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("Building3/Node2D/icon13:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 33.106, -31.544 ), Vector2( 49.5964, -29.4227 ), Vector2( 18.4055, -49.1385 ), Vector2( -16.8866, -55.3524 ), Vector2( -119.121, -62.6074 ), Vector2( -167.526, -20.2847 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("Building3/Node2D/icon13:rotation_degrees")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 1, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 28.0, 28.0, -14.0, -14.0, -58.0 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "Building4 damaged"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Building4/icon8:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 20.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Building4/icon8:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.8 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 881.337, 523.33 ), Vector2( 880.102, 546.376 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Building4/icon15:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 895.632, 502.281 ), Vector2( 958.186, 512.981 ), Vector2( 940.901, 534.381 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Building4/icon15:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 148.0, 120.0 ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "Building5 damaged"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Building5/Node2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 988.015, 474.399 ), Vector2( 999.531, 470.856 ), Vector2( 1021.68, 480.6 ), Vector2( 1046.48, 498.317 ), Vector2( 1050.02, 517.806 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Building5/Node2D:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 8.0, 22.0, 42.0, 76.0 ]
-}
+[ext_resource path="res://src/resources/Building1 damaged.anim" type="Animation" id=3]
+[ext_resource path="res://src/resources/Building3 damaged.anim" type="Animation" id=4]
+[ext_resource path="res://src/resources/Building4 damaged.anim" type="Animation" id=5]
+[ext_resource path="res://src/resources/Building2 damaged.anim" type="Animation" id=6]
+[ext_resource path="res://src/resources/Building5 damaged.anim" type="Animation" id=7]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 36.3315, 67.4449 )
@@ -473,6 +28,92 @@ extents = Vector2( 38.3558, 31.5034 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 38.3558, 23.1932 )
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Building2 damaged"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "Building3 damaged"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Building4 damaged"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "Building5 damaged"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Building1 damaged"
+
+[sub_resource type="AnimationNodeBlend2" id=19]
+
+[sub_resource type="AnimationNodeBlend2" id=20]
+
+[sub_resource type="AnimationNodeBlend2" id=21]
+
+[sub_resource type="AnimationNodeBlend2" id=22]
+
+[sub_resource type="AnimationNodeOneShot" id=23]
+
+[sub_resource type="AnimationNodeOneShot" id=24]
+
+[sub_resource type="AnimationNodeOneShot" id=25]
+
+[sub_resource type="AnimationNodeOneShot" id=26]
+
+[sub_resource type="AnimationNodeOneShot" id=27]
+
+[sub_resource type="AnimationNodeTransition" id=28]
+
+[sub_resource type="AnimationNodeTransition" id=29]
+
+[sub_resource type="AnimationNodeTransition" id=30]
+
+[sub_resource type="AnimationNodeTransition" id=31]
+
+[sub_resource type="AnimationNodeTransition" id=32]
+
+[sub_resource type="AnimationNodeBlendTree" id=33]
+graph_offset = Vector2( -154.5, -68.2 )
+nodes/Animation/node = SubResource( 18 )
+nodes/Animation/position = Vector2( 440, 140 )
+"nodes/Animation 2/node" = SubResource( 14 )
+"nodes/Animation 2/position" = Vector2( 440, 260 )
+"nodes/Animation 3/node" = SubResource( 15 )
+"nodes/Animation 3/position" = Vector2( 440, 380 )
+"nodes/Animation 4/node" = SubResource( 16 )
+"nodes/Animation 4/position" = Vector2( 440, 500 )
+"nodes/Animation 5/node" = SubResource( 17 )
+"nodes/Animation 5/position" = Vector2( 440, 620 )
+nodes/Blend2/node = SubResource( 22 )
+nodes/Blend2/position = Vector2( 1140, 40 )
+"nodes/Blend2 2/node" = SubResource( 19 )
+"nodes/Blend2 2/position" = Vector2( 1140, 400 )
+"nodes/Blend2 3/node" = SubResource( 20 )
+"nodes/Blend2 3/position" = Vector2( 1380, 540 )
+"nodes/Blend2 4/node" = SubResource( 21 )
+"nodes/Blend2 4/position" = Vector2( 1640, 180 )
+"nodes/Building1 damaged/node" = SubResource( 23 )
+"nodes/Building1 damaged/position" = Vector2( 780, -20 )
+"nodes/Building2 damaged/node" = SubResource( 24 )
+"nodes/Building2 damaged/position" = Vector2( 780, 160 )
+"nodes/Building3 damaged/node" = SubResource( 25 )
+"nodes/Building3 damaged/position" = Vector2( 780, 340 )
+"nodes/Building4 damaged/node" = SubResource( 26 )
+"nodes/Building4 damaged/position" = Vector2( 780, 520 )
+"nodes/Building5 damaged/node" = SubResource( 27 )
+"nodes/Building5 damaged/position" = Vector2( 780, 700 )
+nodes/Transition/node = SubResource( 32 )
+nodes/Transition/position = Vector2( 280, 140 )
+"nodes/Transition 2/node" = SubResource( 28 )
+"nodes/Transition 2/position" = Vector2( 280, 260 )
+"nodes/Transition 3/node" = SubResource( 29 )
+"nodes/Transition 3/position" = Vector2( 280, 380 )
+"nodes/Transition 4/node" = SubResource( 30 )
+"nodes/Transition 4/position" = Vector2( 280, 500 )
+"nodes/Transition 5/node" = SubResource( 31 )
+"nodes/Transition 5/position" = Vector2( 280, 620 )
+nodes/output/position = Vector2( 1900, 180 )
+node_connections = [ "output", 0, "Blend2 4", "Blend2 4", 0, "Blend2", "Blend2 4", 1, "Blend2 3", "Blend2 3", 0, "Blend2 2", "Blend2 3", 1, "Building5 damaged", "Blend2 2", 0, "Building3 damaged", "Blend2 2", 1, "Building4 damaged", "Blend2", 0, "Building1 damaged", "Blend2", 1, "Building2 damaged", "Building2 damaged", 0, "Transition 2", "Building2 damaged", 1, "Animation 2", "Building5 damaged", 0, "Transition 5", "Building5 damaged", 1, "Animation 5", "Building1 damaged", 0, "Transition", "Building1 damaged", 1, "Animation", "Building4 damaged", 0, "Transition 4", "Building4 damaged", 1, "Animation 4", "Building3 damaged", 0, "Transition 3", "Building3 damaged", 1, "Animation 3" ]
 
 [node name="City" type="Node2D"]
 script = ExtResource( 1 )
@@ -623,11 +264,11 @@ texture = ExtResource( 2 )
 offset = Vector2( 11.4613, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/Building1 damaged" = SubResource( 1 )
-"anims/Building2 damaged" = SubResource( 2 )
-"anims/Building3 damaged" = SubResource( 3 )
-"anims/Building4 damaged" = SubResource( 4 )
-"anims/Building5 damaged" = SubResource( 5 )
+"anims/Building1 damaged" = ExtResource( 3 )
+"anims/Building2 damaged" = ExtResource( 6 )
+"anims/Building3 damaged" = ExtResource( 4 )
+"anims/Building4 damaged" = ExtResource( 5 )
+"anims/Building5 damaged" = ExtResource( 7 )
 
 [node name="Targets" type="Node2D" parent="."]
 
@@ -675,6 +316,25 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Building5"]
 shape = SubResource( 7 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 33 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/Blend2/blend_amount = 0.5
+"parameters/Blend2 2/blend_amount" = 0.5
+"parameters/Blend2 3/blend_amount" = 0.5
+"parameters/Blend2 4/blend_amount" = 0.5
+"parameters/Building1 damaged/active" = false
+"parameters/Building2 damaged/active" = false
+"parameters/Building3 damaged/active" = false
+"parameters/Building4 damaged/active" = false
+"parameters/Building5 damaged/active" = false
+parameters/Transition/current = 0
+"parameters/Transition 2/current" = 0
+"parameters/Transition 3/current" = 0
+"parameters/Transition 4/current" = 0
+"parameters/Transition 5/current" = 0
 [connection signal="area_entered" from="Targets/Building1" to="." method="_on_Building1_area_entered"]
 [connection signal="area_entered" from="Targets/Building2" to="." method="_on_Building2_area_entered"]
 [connection signal="area_entered" from="Targets/Building3" to="." method="_on_Building3_area_entered"]
