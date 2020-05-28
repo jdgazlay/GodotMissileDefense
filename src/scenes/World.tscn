@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://src/scenes/City.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/scenes/Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/scenes/MainCamera.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -80,4 +81,8 @@ margin_left = 1021.77
 margin_top = 10.808
 margin_right = 1021.77
 margin_bottom = 10.808
+
+[node name="MainCamera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 510.44, 298.777 )
+[connection signal="building_damaged" from="City" to="." method="_on_City_building_damaged"]
 [connection signal="building_damaged" from="City" to="Stats" method="_on_City_building_damaged"]

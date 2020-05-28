@@ -5,6 +5,7 @@ onready var rocket_spawners = $Spawners.get_children()
 onready var city_targets = $City/Targets.get_children()
 onready var Rocket := preload("res://src/scenes/Rocket.tscn")
 onready var stats = $Stats
+onready var main_camera = $MainCamera
 
 
 func _ready() -> void:
@@ -48,3 +49,7 @@ func spawn_attack_rockets() -> void:
 
 	stats.set_rockets(stats.rockets + spawn_rate)
 	spawn_timer.start(spawn_timer_sec)
+
+
+func _on_City_building_damaged(building):
+	main_camera.play_screen_shake()
