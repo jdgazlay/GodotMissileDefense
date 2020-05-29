@@ -32,7 +32,7 @@ func spawn_attack_rockets() -> void:
 	
 	if not len(undamaged_targets):
 		spawn_timer.queue_free()
-		print('you lose')
+		game_over()
 		return
 	
 	for i in spawn_rate:
@@ -53,3 +53,7 @@ func spawn_attack_rockets() -> void:
 
 func _on_City_building_damaged(building):
 	main_camera.play_screen_shake()
+
+
+func game_over() -> void:
+	stats.game_over()

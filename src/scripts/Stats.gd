@@ -29,6 +29,8 @@ var buildings_damaged : = []
 
 onready var level_label := $VBoxContainer/CenterContainer/LevelLabel as Label
 onready var rocket_label := $VBoxContainer/CenterContainer2/RocketLabel as Label
+onready var game_over_vbox := $VBoxContainer2 as VBoxContainer
+onready var game_over_tween := $VBoxContainer2/Tween as Tween
 
 
 func set_rockets(value) -> void:
@@ -47,3 +49,14 @@ func set_level(value) -> void:
 
 func _on_City_building_damaged(building: String) -> void:
 	buildings_damaged.append(building)
+
+
+func game_over() -> void:
+	game_over_vbox.visible = true
+	game_over_tween.interpolate_property(game_over_vbox, "modulate", Color.transparent, Color.white, 0.5, Tween.TRANS_QUINT, Tween.EASE_IN)
+#	game_over_tween.interpolate_property(game_over_vbox, "rect_global_position", game_over_vbox.rect_global_position.y + 100, game_over_vbox.rect_global_position.y, 0.5, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
+	game_over_tween.start()
+	game_over_tween.connect("tween_completed", self, "set_rockets", [0])
+
+func _on_Button_pressed():
+	get_tree().reload_current_scene()

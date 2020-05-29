@@ -1,4 +1,4 @@
-extends Camera2D
+extends Node2D
 
 onready var anim_player : = $AnimationPlayer as AnimationPlayer
 
