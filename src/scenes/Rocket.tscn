@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/scripts/Rocket.gd" type="Script" id=1]
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
@@ -11,18 +11,28 @@ height = 22.4419
 radius = 6.09613
 height = 21.7387
 
-[sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0, 0.121528, 0.958333 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.925781, 0.60534, 0.151886, 1, 0.968627, 0.105882, 0.105882, 0.341176 )
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.121528, 0.510204, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.925781, 0.60534, 0.151886, 1, 0.968627, 0.105882, 0.105882, 0.341176, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=5]
-gradient = SubResource( 4 )
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=8]
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 0.809091 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=7]
 lifetime_randomness = 1.0
+trail_divisor = 2
 emission_shape = 1
 emission_sphere_radius = 1.0
+flag_rotate_y = true
 flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+flatness = 0.25
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
 initial_velocity_random = 0.5
@@ -32,9 +42,16 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 linear_accel = -25.0
 linear_accel_random = 0.25
-angle = 45.0
-scale_random = 0.5
-color_ramp = SubResource( 5 )
+radial_accel = 100.0
+radial_accel_random = 1.0
+damping = 500.0
+damping_random = 0.25
+angle = 70.0
+angle_random = 1.0
+scale = 2.0
+scale_random = 1.0
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 4 )
 hue_variation = 0.05
 hue_variation_random = 1.0
 
@@ -64,11 +81,12 @@ texture = ExtResource( 2 )
 
 [node name="RocketFire" type="Particles2D" parent="."]
 show_behind_parent = true
-position = Vector2( -10, 0 )
+position = Vector2( -8.80791, 0 )
 rotation = -3.14159
 z_index = -10
 z_as_relative = false
 amount = 5000
+lifetime = 0.4
 local_coords = false
-process_material = SubResource( 8 )
+process_material = SubResource( 7 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
