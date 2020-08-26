@@ -92,7 +92,7 @@ margin_bottom = 325.066
 
 [node name="MainCamera" parent="." instance=ExtResource( 5 )]
 position = Vector2( 510.44, 298.777 )
-[connection signal="building_damaged" from="City" to="." method="_on_City_building_damaged"]
 [connection signal="building_damaged" from="City" to="Stats" method="_on_City_building_damaged"]
+[connection signal="building_damaged" from="City" to="." method="_on_City_building_damaged"]
 
 [editable path="Stats"]
